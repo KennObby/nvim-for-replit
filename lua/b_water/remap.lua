@@ -64,9 +64,8 @@ map({ "n", "v" }, "<leader>p", [["+p]], "Paste from system clipboard")
 map("n", "<leader>bn", "<cmd>bnext<cr>", "Next buffer")
 map("n", "<leader>bp", "<cmd>bprevious<cr>", "Prev buffer")
 map("n", "<leader>bd", "<cmd>bdelete<cr>", "Delete buffer")
--- If you use bufferline, these are nice:
--- map("n", "]b", "<cmd>BufferLineCycleNext<cr>", "Buffer next")
--- map("n", "[b", "<cmd>BufferLineCyclePrev<cr>", "Buffer prev")
+map("n", "]b", "<cmd>BufferLineCycleNext<cr>", "Buffer next")
+map("n", "[b", "<cmd>BufferLineCyclePrev<cr>", "Buffer prev")
 
 -- === Config editing ===
 map("n", "<leader>ev", "<cmd>vsplit ~/.config/nvim/init.lua<cr>", "Edit init.lua")
@@ -157,3 +156,8 @@ end)
 -- === Undotree ===
 map("n", "<leader>u", vim.cmd.UndotreeToggle, "Undotree toggle")
 
+-- Oil: open parent dir in the current window
+vim.keymap.set("n", "-", function() require("oil").open() end, { desc = "Oil: parent directory" })
+
+-- Oil: quick floating view (nice for peeking)
+vim.keymap.set("n", "<leader>o", function() require("oil").open_float() end, { desc = "Oil: floating" })
