@@ -28,11 +28,11 @@ vim.o.updatetime = 300
 vim.o.timeoutlen = 500
 
 vim.cmd([[
-    autocmd Filetype c setlocal cindent tabstop=4 shiftwidth=4 noexpandtab
+    autocmd Filetype c setlocal cindent cinoptions=g0,h1s,L0  tabstop=4 shiftwidth=4 noexpandtab
     autocmd Filetype cpp setlocal cindent tabstop=4 shiftwidth=4 noexpandtab
     autocmd FileType rs setlocal tabstop=4 shiftwidth=4 noexpandtab
     autocmd FileType python setlocal tabstop=4 shiftwidth=4 expandtab
-    autocmd FileType javascript,typescript setlocal tabstop=2 shiftwidth=2 expandtab
+    autocmd FileType javascript,typescript setlocal tabstop=4 shiftwidth=4 expandtab
     autocmd BufRead,BufNewFile *.conf set filetype=conf
     autocmd BufRead,BufNewFile *.json set filetype=json
     autocmd BufRead,BufNewFile *.yaml set filetype=yaml

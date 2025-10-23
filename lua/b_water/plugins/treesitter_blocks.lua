@@ -9,7 +9,7 @@ return {
           "lua","python","c","cpp","bash","markdown","json","yaml","toml","vim","vimdoc","query"
         },
         highlight = { enable = true },
-        indent    = { enable = true },
+        indent    = { enable = false },
 
         -- Incremental selection = grow/shrink “by syntax node”
         incremental_selection = {

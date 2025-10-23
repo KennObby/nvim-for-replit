@@ -11,7 +11,7 @@ return {
 
       treesitter.setup({
         ensure_installed = {
-          "c", "lua", "vim", "bash", "python", "javascript", "typescript",
+          "c" , "lua", "vim", "bash", "python", "javascript", "typescript",
           "json", "markdown", "markdown_inline", "yaml", "toml", "rust", "go",
           "cpp", "vimdoc"
         },
@@ -20,7 +20,7 @@ return {
         highlight = {
           enable = true,
           disable = function(lang, buf)
-            local disabled_fts = { "markdown", "markdown_inline", "vimdoc", "c", "cpp" }
+            local disabled_fts = { "markdown", "markdown_inline", "vimdoc"}
             if vim.list_contains(disabled_fts, lang) then
               return true
             end

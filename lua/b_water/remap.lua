@@ -95,7 +95,7 @@ if ok_telescope then
       hidden = true,
     })
   end, "Find in dotfiles")
-  -- File browser (if the extension is installed)
+  -- File browser
   pcall(function()
     local telescope = require("telescope")
     telescope.load_extension("file_browser")
@@ -160,4 +160,4 @@ map("n", "<leader>u", vim.cmd.UndotreeToggle, "Undotree toggle")
 vim.keymap.set("n", "-", function() require("oil").open() end, { desc = "Oil: parent directory" })
 
 -- Oil: quick floating view (nice for peeking)
-vim.keymap.set("n", "<leader>o", function() require("oil").open_float() end, { desc = "Oil: floating" })
+vim.keymap.set("n", "<C-o>", function() require("oil").open_float() end, { desc = "Oil: floating" })

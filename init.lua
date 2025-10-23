@@ -9,7 +9,6 @@ if not (vim.uv or vim.loop).fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(lazypath)
 
--- now load your stuff
 require("lazy").setup("b_water.plugins")
 require("b_water.settings")
 require("b_water.remap")
