@@ -30,15 +30,6 @@ map("n", "<leader>x",  "<cmd>wqa<cr>","Write & quit all")
 map("n", "<leader>qq", "<cmd>q<cr>",  "Quit")
 map("n", "<leader>Q",  "<cmd>qa!<cr>","Force quit all")
 
--- === Terminal ===
-map("n", "<leader>t", "<cmd>vsplit | terminal<cr>", "Open terminal (vsplit)")
--- Make terminal behave like a pane
-map("t", "<Esc>", [[<C-\><C-n>]], "Terminal normal mode")
-map("t", "<C-h>", [[<C-\><C-n><C-w>h]], "Terminal window left")
-map("t", "<C-j>", [[<C-\><C-n><C-w>j]], "Terminal window down")
-map("t", "<C-k>", [[<C-\><C-n><C-w>k]], "Terminal window up")
-map("t", "<C-l>", [[<C-\><C-n><C-w>l]], "Terminal window right")
-
 -- === Editing / Block management ===
 -- Duplicate current line / selection
 map("n", "<S-p>", "yyp", "Duplicate line below")
